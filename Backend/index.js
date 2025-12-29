@@ -13,7 +13,7 @@ const PORT = process.env.PORT || 3000;
 app.use(cors());
 
 mongoose
-  .connect("mongodb+srv://yadav01krishankant_db_user:Krishan12345@cluster0.rlemx9n.mongodb.net/")
+  .connect(process.env.MONGO_URI)
   .then(() => {
     console.log("Connected to MongoDB");
   })
